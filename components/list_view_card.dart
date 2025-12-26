@@ -4,7 +4,7 @@ import 'package:newsapp/models/card_model.dart';
 
 final List<Cardmodel> data = [
   Cardmodel(cardName: "Business", cardImage: "assets/business.avif"),
-  Cardmodel(cardName: "Entertaiment", cardImage: "assets/entertaiment.avif"),
+  Cardmodel(cardName: "Entertainment", cardImage: "assets/entertaiment.avif"),
   Cardmodel(cardName: "Health", cardImage: "assets/health.avif"),
   Cardmodel(cardName: "Technology", cardImage: "assets/technology.jpeg"),
   Cardmodel(cardName: "Sports", cardImage: "assets/sports.avif"),
@@ -18,17 +18,15 @@ class Listviewcard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-    height: 100,
-    child: ListView.builder(
-      physics: BouncingScrollPhysics(),
-      scrollDirection: Axis.horizontal,
-      itemCount: data.length,
-      itemBuilder: (context, index) {
-        return CardCatogry(cardData: data[index]);
-      },
-    ),
-  );
+      height: 100,
+      child: ListView.builder(
+        physics: BouncingScrollPhysics(),
+        scrollDirection: Axis.horizontal,
+        itemCount: data.length,
+        itemBuilder: (context, index) {
+          return CardCatogry(cardData: data[index]);
+        },
+      ),
+    );
   }
 }
-
- 
